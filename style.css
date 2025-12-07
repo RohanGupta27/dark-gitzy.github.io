@@ -1,49 +1,177 @@
-/* --- UPDATED HERO SECTION STYLES --- */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1e1e1e;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #bb86fc; /* Accent purple */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #bb86fc;
+}
+
+/* Sections */
+section, header {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #bb86fc;
+}
+
+/* Hero Section */
 header {
-    /* Ensures the section takes up most of the screen height */
-    min-height: 90vh; 
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.hero-container {
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #bb86fc;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #a370f7;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-links {
+    margin-top: 15px;
+}
+
+.project-links a {
+    color: #bb86fc;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 0.9rem;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;    /* Vertically centers items */
-    justify-content: center; /* Horizontally centers items */
-    gap: 50px;              /* Space between your text and image */
-    max-width: 1200px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #1e1e1e;
+    color: #fff;
     width: 100%;
 }
 
-/* Style for the Image */
-.hero-image img {
-    width: 300px;           /* Size of the image */
-    height: 300px;          
-    border-radius: 50%;     /* Makes it a perfect circle */
-    object-fit: cover;      /* Ensures the image isn't stretched/squashed */
-    border: 4px solid #bb86fc; /* Purple border to match your theme */
-    box-shadow: 0 0 25px rgba(187, 134, 252, 0.4); /* Glowing effect */
-    transition: transform 0.3s ease;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #888;
 }
 
-.hero-image img:hover {
-    transform: scale(1.05); /* Slight zoom effect when you hover over it */
-}
-
-/* --- MOBILE RESPONSIVENESS --- */
-/* This makes the image stack on top of text on small phone screens */
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column-reverse; /* Puts image on top, text on bottom */
-        text-align: center;
-        padding-top: 20px;
+    .nav-links {
+        display: none; /* Simple hide for mobile for now */
     }
-
-    .hero-image img {
-        width: 200px;   /* Smaller image on phones */
-        height: 200px;
-        margin-bottom: 20px;
+    .hero-content h1 {
+        font-size: 2rem;
     }
 }
