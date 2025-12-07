@@ -3,54 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio | Web Developer</title>  <!-- Change to your name/title -->
-    <meta name="description" content="Portfolio of [Your Name], a web developer skilled in HTML, CSS, and JavaScript. View my projects and contact me.">
-    <meta name="keywords" content="web developer, portfolio, [Your Name], projects">
-    <link rel="stylesheet" href="styles.css">
+    <title>My Dynamic Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+    <nav>
+        <div class="logo">MyPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>Hi, I'm <span id="typing-text"></span><span class="cursor">|</span></h1>
+            <p>Web Developer | Designer | Tech Enthusiast</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
     </header>
 
-    <section id="home">
-        <h1>Hi, I'm [Your Name]</h1>
-        <p>Web Developer | Designer | [Your Tagline]</p>
-        <button onclick="scrollToSection('projects')">View My Work</button>
-    </section>
-
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <h2>About Me</h2>
-        <p>I'm a passionate developer with skills in HTML, CSS, JavaScript, and more. I love building websites and solving problems.</p>
+        <p class="about-text">
+            I am a passionate developer skilled in HTML, CSS, and JavaScript. 
+            I love solving complex problems and building interactive web experiences. 
+            Currently looking for new opportunities to create amazing things!
+        </p>
     </section>
 
     <section id="projects">
         <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1: My Awesome App</h3>
-            <p>A web app built with React. [Add description].</p>
-            <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
-        </div>
-        <div class="project">
-            <h3>Project 2: Portfolio Site</h3>
-            <p>This very site! [Add description].</p>
-            <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
-        </div>
+        <div id="project-container" class="project-grid">
+            </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: <a href="#" target="_blank">Your LinkedIn</a></p>
+    <section id="contact" data-aos="fade-up">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
 
+    <footer>
+        <p>&copy; 2025 My Portfolio. Built with code.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
