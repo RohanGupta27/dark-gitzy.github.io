@@ -15,12 +15,12 @@ function typeWriter() {
 // Add as many projects as you want here!
 const projects = [
     {
-        title: "Calculus Helper App",
-        description: "A Python tool to solve successive differentiation problems.",
+        title: "CrowdSense App",
+        description: "A app prototype to deal with rush problems in mumbai local trains",
         liveLink: "#",
-        githubLink: "#"
+        githubLink: ""
     },
-    {
+   /* {
         title: "AI Image Generator",
         description: "An interface using API calls to generate art from text.",
         liveLink: "#",
@@ -37,7 +37,7 @@ const projects = [
         description: "A fully responsive dynamic website built with JS.",
         liveLink: "#",
         githubLink: "#"
-    }
+    }*/
 ];
 
 // --- 3. RENDER PROJECTS TO PAGE ---
@@ -78,3 +78,4 @@ window.onload = function() {
     });
 
 };
+
