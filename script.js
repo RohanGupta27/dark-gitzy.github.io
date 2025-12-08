@@ -17,7 +17,7 @@ const projects = [
     {
         title: "CrowdSense App",
         description: "A app prototype to deal with rush problems in mumbai local trains",
-        liveLink: "https://github.com/dark-gitzy/dark-gitzy.github.io/blob/main/CrowdSense.pptx",
+        liveLink: "https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/dark-gitzy/dark-gitzy.github.io/main/CrowdSense.pptx",
         githubLink: "#"
     },
    /* {
@@ -78,6 +78,7 @@ window.onload = function() {
     });
 
 };
+
 
 
 
