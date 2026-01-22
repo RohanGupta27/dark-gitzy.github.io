@@ -1,0 +1,18 @@
+# ===== Unity generated folders =====
+flappybird/Library/
+flappybird/Temp/
+flappybird/Logs/
+flappybird/Obj/
+flappybird/Build/
+flappybird/Builds/
+flappybird/UserSettings/
+
+# ===== IDE files =====
+flappybird/.vscode/
+flappybird/.vs/
+flappybird/*.csproj
+flappybird/*.sln
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
