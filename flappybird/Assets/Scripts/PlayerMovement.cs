@@ -14,11 +14,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (
-            Input.GetKeyDown(KeyCode.space) ||
-            Input.GetMouseButton(0) ||
-            (Input.GetTouch > 0 &&
-            Input.GetTouch(0).phase ==
-            TouchPhase.Began)
+            Input.GetKeyDown(KeyCode.Space) ||
+            Input.GetMouseButton(0)
         )
         {
             Jump();
